@@ -36,6 +36,7 @@
           <img src="<%= user.photos[0].value %>" alt="Profile Picture" class="profile-pic mb-3">
           <p><strong>NAME:</strong> <%= user.displayName %></p>
           <p><strong>ID:</strong> <%= user.id.substring(0, 9) + "XXXX" + user.id.substring(13) %></p>
+          <p><strong>Followers Count:</strong> <%= followers_count %></p>
         </div>
       </div>
     </div>
