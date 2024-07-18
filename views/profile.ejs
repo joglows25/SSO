@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <style>
+    .profile-container {
+      margin-top: 50px;
+    }
+    .profile-card {
+      padding: 20px;
+    }
+    .profile-info {
+      margin-top: 20px;
+    }
+    .profile-pic {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container profile-container">
+    <div class="card profile-card text-center">
+      <div class="card-header">
+        <h2><span class="fa fa-user"></span> User Profile</h2>
+      </div>
+      <div class="card-body">
+        <a href="/logout" class="btn btn-danger mb-3">LOGOUT</a>
+        <div class="profile-info">
+          <img src="<%= user.photos[0].value %>" alt="Profile Picture" class="profile-pic mb-3">
+          <p><strong>NAME:</strong> <%= user.displayName %></p>
+          <p><strong>ID:</strong> <%= user.id.substring(0, 9) + "XXXX" + user.id.substring(13) %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
