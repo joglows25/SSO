@@ -12,11 +12,11 @@ passport.use(new FacebookStrategy({
   profileFields: ['id', 'displayName', 'email', 'picture.type(large)'],
 },
 async (accessToken, refreshToken, profile, done) => {
-  const url=`graph.facebook.com/me?fields=id,name,accounts{fan_count,followers_count}&access_token=${accessToken}`;
-  const responseAPI=axios.get(url).then(
-    console.log(JSON.stringify(responseAPI))
-  )
-  console.log(`${profile._raw}`);
+  // const url=`graph.facebook.com/me?fields=id,name,accounts{fan_count,followers_count}&access_token=${accessToken}`;
+  // const responseAPI=axios.get(url).then(
+  //   console.log(JSON.stringify(responseAPI))
+  // )
+  // console.log(`${profile._raw}`);
   const responseDB = await User.findOne({ 'fid': profile.id });
   console.log(`profile is ${profile._raw}`);
   try {

@@ -19,6 +19,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/api/v1/auth', authRoutes);
+
 app.get('/',(req,res)=>{
     res.render("home.ejs")
 })
