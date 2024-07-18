@@ -23,7 +23,7 @@ app.get('/',(req,res)=>{
     res.render("home.ejs")
 })
 app.get('/auth/facebook',passport.authenticate('facebook',{scope:['public_profile','email']}))
-app.get('facebook/callback',passport.authenticate('facebook',{
+app.get('/auth/facebook/callback',passport.authenticate('facebook',{
     successRedirect:'/profile',
     failureRedirect:'/failed'
 }))
