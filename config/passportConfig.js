@@ -8,8 +8,7 @@ const { default: axios } = require('axios');
 passport.use(new FacebookStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
-  // callbackURL: 'https://www.geeksforgeeks.org/',
-  callbackURL: 'https://localhost:5000/auth/facebook/callback',
+  callbackURL: 'https://sso-55xt.onrender.com/auth/facebook/callback',
   profileFields: ['id', 'displayName', 'email', 'picture.type(large)'],
 },
 async (accessToken, refreshToken, profile, done) => {
